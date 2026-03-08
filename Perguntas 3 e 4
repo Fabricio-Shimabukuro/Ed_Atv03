@@ -1,0 +1,45 @@
+3- #include <stdio.h>
+
+typedef struct {
+    int numero;
+    float saldo;
+} Conta;
+
+// inicializar conta
+void inicializar(Conta *c, int numero) {
+    c->numero = numero;
+    c->saldo = 0;
+}
+
+// deposito
+void depositar(Conta *c, float valor) {
+    c->saldo += valor;
+}
+
+// saque
+void sacar(Conta *c, float valor) {
+    if (valor <= c->saldo) {
+        c->saldo -= valor;
+    } else {
+        printf("Saldo insuficiente\n");
+    }
+}
+
+// imprimir saldo
+void imprimirSaldo(Conta *c) {
+    printf("Conta: %d\n", c->numero);
+    printf("Saldo: %.2f\n", c->saldo);
+}
+
+4- #include <stdlib.h>
+
+Conta* criarConta(int numero) {
+    Conta *c = (Conta*) malloc(sizeof(Conta));
+
+    if (c != NULL) {
+        c->numero = numero;
+        c->saldo = 0;
+    }
+
+    return c;
+}
