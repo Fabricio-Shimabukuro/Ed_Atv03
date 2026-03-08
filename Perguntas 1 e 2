@@ -1,9 +1,0 @@
-1- Um Tipo Abstrato de Dados (TAD) é um modelo
-de dados que def ine quais informações existem
-e quais operações podem ser feitas sobre elas,
-sem especificar como esses dados serão 
-implementados internamente.
-A principal característica é a abstração, 
-que esconde os detalhes internos da 
-implementação e permite que o usuário 
-utilize apenas as operações definidas. 
